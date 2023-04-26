@@ -16,10 +16,12 @@
         )";
 
         if (mysqli_query($conn, $sql)) {
-            echo "Table created successfully";
+            header("Location: index.html");
         } else {
             echo "Error creating table: " . mysqli_error($conn);
         }
+    } else{
+        header("Location: index.html");
     }
 
     mysqli_close($conn);
