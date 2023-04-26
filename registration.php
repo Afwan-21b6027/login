@@ -5,6 +5,7 @@
     $email = $_POST["email"];
     $password = $_POST["password"];
 
+    // TODO: Create Validation!
     $sql_insert = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
 
     if (mysqli_query($conn, $sql_insert)) {
