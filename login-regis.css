@@ -20,21 +20,6 @@ body{
 
 }
 
-div#content-div-login.login-active{
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 65px;
-
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    visibility: visible;
-    background: white;
-
-}
-
 #content-div-register{
     border: 1px solid black;
     border-radius: 25px;
@@ -49,6 +34,23 @@ div#content-div-login.login-active{
     background: white;
 
 }
+
+#content-div-login.login-active{
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 65px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    visibility: visible;
+    background: white;
+
+}
+
+
 
 #content-div-register.regis-active{
     border: 1px solid black;
