@@ -8,7 +8,9 @@
     $sql_insert = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
 
     if (mysqli_query($conn, $sql_insert)) {
-        echo "New record created successfully";
+        echo "<script> 
+            alert('Successfully registered!'); 
+            </script>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
