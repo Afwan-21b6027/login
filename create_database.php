@@ -1,5 +1,5 @@
 <?php
-    require('connection.php');
+    require('initialize.php');
     $result = mysqli_query($conn, "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$database'");
 
     if (mysqli_num_rows($result) == 0) {

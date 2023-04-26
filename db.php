@@ -3,6 +3,7 @@
     $username = "root";
     $password = "";
     $database = "login_registration";
+    $tableName = "users";
 
     $conn = new mysqli($servername, $username, $password, $database);
 

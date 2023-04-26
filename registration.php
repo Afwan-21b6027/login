@@ -1,7 +1,6 @@
 <?php
     require('db.php');
 
-    $tableName = "users";
     $tableExists = false;
     $result = mysqli_query($conn, "SHOW TABLES LIKE '$tableName'");
     if (mysqli_num_rows($result) == 1) {
