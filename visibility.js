@@ -4,6 +4,8 @@ function ChangeToLogin(){
 
     var regisDiv = document.getElementById('content-div-register');
     regisDiv.classList.remove('regis-active');
+
+    document.title = "Login Page";
 }
 
 function ChangeToRegister(){
@@ -12,4 +14,6 @@ function ChangeToRegister(){
 
     var regisDiv = document.getElementById("content-div-register");
     regisDiv.classList.toggle("regis-active");
+
+    document.title = "Registration Page";
 }
