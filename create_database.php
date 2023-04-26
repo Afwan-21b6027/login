@@ -8,12 +8,12 @@
             echo "<script> 
             alert('Database made'); 
             </script>";
-            header("Location: index.html");
+            header("Location: create_table.php");
         } else {
             echo "Error creating database: " . mysqli_error($conn);
         }
     } else {
-        header("Location: index.html");
+        header("Location: create_table.php");
     }
     
     mysqli_close($conn);
