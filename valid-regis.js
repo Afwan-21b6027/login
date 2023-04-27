@@ -4,21 +4,7 @@ function ValidRegisForm() {
     var email = document.getElementById("regis-email-field").value.trim();
     var password = document.getElementById("regis-password-field").value.trim();
     var confirmPassword = document.getElementById("confirm-password-field").value.trim();
-    var captcha_checkbox = document.getElementById("captcha-checkbox")
-
-    // // ! Error Message Elements
-    // var usernameErr = document.getElementById("err-username-span");
-    // usernameErr.innerHTML = "";
-
-    // var emailErr = document.getElementById("err-email-span");
-    // emailErr.innerHTML = "";
-
-    // var passwordErr = document.getElementById("err-password-span");
-    // passwordErr.innerHTML = "";
-
-    // var confirmPasswordErr = document.getElementById("err-confirm-password-span");
-    // confirmPasswordErr.innerHTML = "";
-
+    var captcha_checkbox = document.getElementById("captcha-checkbox");
 
     // ! Input Field Validations
     if (username === "") {
