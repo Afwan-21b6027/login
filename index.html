@@ -37,7 +37,7 @@
     </div>
 
     <!-- class="regis-active" -->
-    <div id="content-div-register" class="">
+    <div id="content-div-register" class="regis-active">
         <h2 id="div-header">Register</h2>
     
         <form action="registration.php" method="post" onsubmit="return IsFormValid(event)">
@@ -66,7 +66,7 @@
             </div>
 
             <div class="captcha-div">
-                <input type="checkbox" name="captcha-checkbox" id="captcha-checkbox">
+                <input type="checkbox" name="captcha-checkbox" id="captcha-checkbox" onclick="PopUpCaptcha()">
                 <label for="captcha-checkbox" class="label-txt">Captcha</label>
             </div>
 
@@ -78,7 +78,7 @@
     </div>
 
     <div id="captcha-popup" class="">
-        <div id="captcha-contents">
+        <div id="captcha-contents" class="">
             <canvas id="captcha-canvas">Captcha Texts goes here</canvas>
             <input type="text" name="captcha-text-field" id="captcha-text-field">
             <div class="captcha-submission-div">
@@ -91,5 +91,6 @@
     <script src="visibility.js"></script>
     <!-- <script src="valid-login.js"></script> -->
     <script src="valid-regis.js"></script>
+    <script src="captcha.js"></script>
 </body>
 </html>

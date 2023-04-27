@@ -105,14 +105,38 @@ body{
     padding: 50px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
     background-color: white;
-    /* visibility: hidden; */
+    visibility: hidden;
     /* opacity: 0; */
     /* transition: 0.5s; */
 }
 
+#captcha-popup.popup-active{
+    position: fixed;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background-color: white;
+    visibility: visible;
+    /* opacity: 0; */
+    /* transition: 0.5s; */
+}
+
+
 #captcha-contents{
     display: grid;
     grid-template-rows: auto auto auto;
+    visibility: hidden;
+}
+
+#captcha-contents.popup-active{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    visibility: visible;
 }
 
 .input-field{
