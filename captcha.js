@@ -1,7 +1,7 @@
 // ! Captcha Element Initialization
 var captcha_canvas = document.querySelector("#captcha-canvas");
 var captcha_text_element = captcha_canvas.getContext('2d');
-captcha_text_element.font = "30px Roboto";
+captcha_text_element.font = "italic 30px sans-serif";
 captcha_text_element.fillStyle = "#000000";
 var captcha_txtfield = document.getElementById("captcha-text-field");
 
@@ -72,22 +72,20 @@ var alphanumeric_arr = [
 ];
 
 var captcha_string = CreateCaptcha();
-
-
 var submitCaptchaBtn = document.getElementById("submit-captcha-btn");
 submitCaptchaBtn.addEventListener('click', CheckCaptcha)
 
+
 var exitCaptchaBtn = document.getElementById("exit-captcha-btn");
 exitCaptchaBtn.addEventListener('click', ExitCaptcha);
-
 var refreshCaptchaBtn = document.getElementById("refresh-captcha-btn");
 refreshCaptchaBtn.addEventListener('click', Refresh);
 
-function PopUpCaptcha() {
+function PopUpCaptcha(captcha_checkbox) {
   var captchaPopupDiv = document.getElementById("captcha-popup");
   var captchaContentsDiv = document.getElementById("captcha-contents");
 
-  if (document.getElementById("captcha-checkbox").checked) {
+  if (captcha_checkbox.checked) {
     captchaPopupDiv.classList.add("popup-active");
     captchaContentsDiv.classList.add("popup-active");
   } else {
@@ -115,7 +113,7 @@ function ExitCaptcha(){
     document
       .getElementById("captcha-contents")
       .classList.remove("popup-active");
-    document.getElementById("captcha-checkbox").checked = false;
+    document.querySelector(".captcha-checkbox").checked = false;
 }
 
 function Refresh(){

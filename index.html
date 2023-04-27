@@ -8,6 +8,49 @@
     <title>Registration Page</title>
 </head>
 <body>
+
+    <!-- ! Registration Div Section -->
+    <div id="content-div-register" class="regis-active">
+        <h2 id="div-header">Register</h2>
+        
+        <form action="registration.php" method="post" onsubmit="return IsFormValid(event)">
+            <div class="input-div">
+                <label for="username" class="label-txt">Username</label>
+                <input type="text" class="input-field" name="username" id="regis-username-field">
+                <span id="err-username-span"></span>
+            </div>
+            
+            <div class="input-div">
+                <label for="email" class="label-txt">Email Address</label>
+                <input type="email" class="input-field" name="email" id="regis-email-field">
+                <span id="err-email-span"></span>
+            </div>
+    
+            <div class="input-div">
+                <label for="password" class="label-txt">Password</label>
+                <input type="password" class="input-field" name="password" id="regis-password-field">
+                <span id="err-password-span"></span>
+            </div>
+            
+            <div class="input-div">
+                <label for="confirm_password" class="label-txt">Confirm password</label>
+                <input type="password" class="input-field" name="confirm_password" id="confirm-password-field">
+                <span id="err-confirm-password-span"></span>
+            </div>
+
+            <div class="captcha-div">
+                <input type="checkbox" name="captcha-checkbox" class="captcha-checkbox" id="regis-captcha-checkbox" onclick="PopUpCaptcha(this)">
+                <label for="captcha-checkbox" class="label-txt">Captcha</label>
+            </div>
+            
+            <div class="input-div">
+                <p class="link-txt">Account available? <a class="link-txt" href="#" onclick="ChangeToLogin()">Click here</a> to sign in!</p>
+                <input type="submit" value="submit" class="form-submit-btn" id="regis-submit-btn">
+            </div>
+        </form>
+    </div>
+    
+    <!-- ! Login Div Section -->
     <div id="content-div-login" class="">
         <h2 id="div-header">Login</h2>
         <form action="" method="post">
@@ -28,6 +71,11 @@
                 <input type="password" class="input-field" name="password" id="login-password-field">
                 <span id="err-password-span"></span>
             </div>
+
+            <div class="captcha-div">
+                <input type="checkbox" name="captcha-checkbox" class="captcha-checkbox" id="login-captcha-checkbox" onclick="PopUpCaptcha(this)">
+                <label for="captcha-checkbox" class="label-txt">Captcha</label>
+            </div>
             
             <div class="input-div">
                 <p class="link-txt">First time? <a class="link-txt" href="#" onclick="ChangeToRegister()">Click here</a> to sign up!</p>
@@ -36,46 +84,7 @@
         </form>
     </div>
 
-    <div id="content-div-register" class="regis-active">
-        <h2 id="div-header">Register</h2>
-    
-        <form action="registration.php" method="post" onsubmit="return IsFormValid(event)">
-            <div class="input-div">
-                <label for="username" class="label-txt">Username</label>
-                <input type="text" class="input-field" name="username" id="regis-username-field">
-                <span id="err-username-span"></span>
-            </div>
-    
-            <div class="input-div">
-                <label for="email" class="label-txt">Email Address</label>
-                <input type="email" class="input-field" name="email" id="regis-email-field">
-                <span id="err-email-span"></span>
-            </div>
-    
-            <div class="input-div">
-                <label for="password" class="label-txt">Password</label>
-                <input type="password" class="input-field" name="password" id="regis-password-field">
-                <span id="err-password-span"></span>
-            </div>
-
-            <div class="input-div">
-                <label for="confirm_password" class="label-txt">Confirm password</label>
-                <input type="password" class="input-field" name="confirm_password" id="confirm-password-field">
-                <span id="err-confirm-password-span"></span>
-            </div>
-
-            <div class="captcha-div">
-                <input type="checkbox" name="captcha-checkbox" id="captcha-checkbox" onclick="PopUpCaptcha()">
-                <label for="captcha-checkbox" class="label-txt">Captcha</label>
-            </div>
-
-            <div class="input-div">
-                <p class="link-txt">Account available? <a class="link-txt" href="#" onclick="ChangeToLogin()">Click here</a> to sign in!</p>
-                <input type="submit" value="submit" class="form-submit-btn" id="regis-submit-btn">
-            </div>
-        </form>
-    </div>
-
+    <!-- ! Captcha Div Section -->
     <div id="captcha-popup" class="">
         <div id="captcha-contents" class="">
             <canvas id="captcha-canvas">Captcha Texts goes here</canvas>
@@ -88,9 +97,10 @@
         </div>
     </div>
 
-    <script src="visibility.js"></script>
-    <!-- <script src="valid-login.js"></script> -->
-    <script src="valid-regis.js"></script>
+    <!-- ! Javascript Files -->
     <script src="captcha.js"></script>
+    <script src="visibility.js"></script>
+    <script src="valid-regis.js"></script>
+    <!-- <script src="valid-login.js"></script> -->
 </body>
 </html>

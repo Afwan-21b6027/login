@@ -122,6 +122,7 @@ body{
     display: grid;
     grid-template-rows: auto auto auto;
     visibility: hidden;
+    
 }
 
 #captcha-contents.popup-active{

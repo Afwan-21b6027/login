@@ -4,7 +4,7 @@ function ValidRegisForm() {
     var email = document.getElementById("regis-email-field").value.trim();
     var password = document.getElementById("regis-password-field").value.trim();
     var confirmPassword = document.getElementById("confirm-password-field").value.trim();
-    var captcha_checkbox = document.getElementById("captcha-checkbox");
+    var captcha_checkbox = document.getElementById("regis-captcha-checkbox");
 
     // ! Input Field Validations
     if (username === "") {
