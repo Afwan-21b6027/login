@@ -13,29 +13,25 @@
     <div id="content-div-register" class="regis-active">
         <h2 id="div-header">Register</h2>
         
-        <form action="registration.php" method="post" onsubmit="return IsFormValid(event)">
+        <form action="registration.php" method="post" onsubmit="return IsRegisFormValid(event)">
             <div class="input-div">
                 <label for="username" class="label-txt">Username</label>
                 <input type="text" class="input-field" name="username" id="regis-username-field">
-                <span id="err-username-span"></span>
             </div>
             
             <div class="input-div">
                 <label for="email" class="label-txt">Email Address</label>
                 <input type="email" class="input-field" name="email" id="regis-email-field">
-                <span id="err-email-span"></span>
             </div>
     
             <div class="input-div">
                 <label for="password" class="label-txt">Password</label>
                 <input type="password" class="input-field" name="password" id="regis-password-field">
-                <span id="err-password-span"></span>
             </div>
             
             <div class="input-div">
                 <label for="confirm_password" class="label-txt">Confirm password</label>
                 <input type="password" class="input-field" name="confirm_password" id="confirm-password-field">
-                <span id="err-confirm-password-span"></span>
             </div>
 
             <div class="captcha-div">
@@ -57,19 +53,16 @@
             <div class="input-div">
                 <label for="username" class="label-txt">Username</label>
                 <input type="text" class="input-field" name="username" id="login-username-field">
-                <span id="err-username-span"></span>
             </div>
 
             <div class="input-div">
                 <label for="email" class="label-txt">Email Address</label>
                 <input type="email" class="input-field" name="email" id="login-email-field">
-                <span id="err-email-span"></span>
             </div>
 
             <div class="input-div">
                 <label for="password" class="label-txt">Password</label>
                 <input type="password" class="input-field" name="password" id="login-password-field">
-                <span id="err-password-span"></span>
             </div>
 
             <div class="captcha-div">
