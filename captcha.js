@@ -125,17 +125,21 @@ function Refresh(){
 function CreateCaptcha(){
     captcha_txtfield.value = '';
     let alphanumerical_arr = [];
+
     for (let i = 0; i < 7; i++) {
       alphanumerical_arr.push(
         alphanumeric_arr[Math.floor(Math.random() * alphanumeric_arr.length)]
       );
     }
+
     captcha_text_element.clearRect(0, 0, captcha_canvas.width, captcha_canvas.height);
     var captcha_string = alphanumerical_arr.join("");
+
     captcha_text_element.fillText(
       captcha_string,
       captcha_canvas.width / 4,
       captcha_canvas.height / 2
     );
+
     return captcha_string;
 }
