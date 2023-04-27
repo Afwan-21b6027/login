@@ -103,8 +103,6 @@ body{
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
     background-color: white;
     visibility: hidden;
-    /* opacity: 0; */
-    /* transition: 0.5s; */
 }
 
 #captcha-popup.popup-active{
@@ -119,8 +117,6 @@ body{
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
     background-color: white;
     visibility: visible;
-    /* opacity: 100%; */
-    /* transition: 0.5s; */
 }
 
 
