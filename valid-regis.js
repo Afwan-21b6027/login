@@ -1,15 +1,9 @@
-function ValidRegisForm(event) {
-    // event.preventDefault(event);
-
-    var isValid = true;
-
+function ValidRegisForm() {
     // ! Input Fields
-    var username = document.getElementById("username-field").value.trim();
-    var email = document.getElementById("email-field").value.trim();
-    var password = document.getElementById("password-field").value.trim();
-    var confirmPassword = document
-        .getElementById("confirm-password-field")
-        .value.trim();
+    var username = document.getElementById("regis-username-field").value.trim();
+    var email = document.getElementById("regis-email-field").value.trim();
+    var password = document.getElementById("regis-password-field").value.trim();
+    var confirmPassword = document.getElementById("confirm-password-field").value.trim();
 
     // ! Error Message Elements
     var usernameErr = document.getElementById("err-username-span");
@@ -24,43 +18,51 @@ function ValidRegisForm(event) {
     var confirmPasswordErr = document.getElementById("err-confirm-password-span");
     confirmPasswordErr.innerHTML = "";
 
+
     // ! Input Field Validations
     if (username === "") {
-        usernameErr.innerHTML = "Username is required";
-        isValid = false;
+        // usernameErr.innerHTML = "Username is required";
+        alert("Username is required!");
+        return false;
     }
 
     if (email === "") {
-        emailErr.innerHTML = "Email is required";
-        isValid = false;
+        // emailErr.innerHTML = "Email is required";
+        alert("Email is required!");
+        return false;
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-        emailErr.innerHTML = "Invalid email format";
-        isValid = false;
+        // emailErr.innerHTML = "Invalid email format";
+        alert("Invalid email format!");
+        return false;
     }
 
     if (password === "") {
-        passwordErr.innerHTML = "Password is required";
-        isValid = false;
+        // passwordErr.innerHTML = "Password is required";
+        alert("Password is required!");
+        return false;
     } else if (password.length < 8) {
-        passwordErr.innerHTML = "Password must be at least 8 characters";
-        isValid = false;
+        // passwordErr.innerHTML = "Password must be at least 8 characters";
+        alert("Password must be at least 8 characters long!");
+        return false;
     }
 
     if (confirmPassword === "") {
-        confirmPasswordErr.innerHTML = "Confirm Password is required";
-        isValid = false;
+        // confirmPasswordErr.innerHTML = "Confirm Password is required";
+        alert("Please enter your password again!");
+        return false;
     }
     
     if (password !== confirmPassword) {
         confirmPasswordErr.innerHTML = "Passwords do not match";
-        isValid = false
+        alert("Your password does not match. Please enter again!");
+        return false;
     }
 
-    return isValid;
+    return true;
 }
 
-function IsFormValid(event){
-    if (ValidRegisForm() == false){
-        event.preventDefault(event);
-    } 
+function IsFormValid(event) {
+    if (ValidRegisForm() == false) {
+        event.preventDefault();
+    }
 }
