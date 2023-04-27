@@ -11,15 +11,19 @@ function PopUpCaptcha(){
     }
 }
 
+// ! Captcha Element Initialization
 var captcha_canvas = document.querySelector("#captcha-canvas");
 var captcha_text_element = captcha_canvas.getContext('2d');
 captcha_text_element.font = "30px Roboto";
-captcha_text_element.fillStyle = "#ffffff";
+captcha_text_element.fillStyle = "#000000";
 
-var captchaInputField = document.getElementById("captcha-text-field");
+// ! Input field and buttons initialization
+var captcha_txtfield = document.getElementById("captcha-text-field");
+
 var refreshCaptchaBtn = document.getElementById("refresh-captcha-btn");
-var submitCaptchaBtn = document.getElementById("submit-captcha-btn");
 
+
+// ! Array initialization
 let alphanumeric_arr = [
   "A",
   "B",
@@ -86,9 +90,27 @@ let alphanumeric_arr = [
 ];
 let captchaSelection_arr =[];
 
+// ! Inserting into array captcha values
 for (let i = 0; i < 7; i++){
     captchaSelection_arr.push(alphanumeric_arr[Math.floor(Math.random() * alphanumeric_arr.length)]);
 }
+
+
+var captcha_string = captchaSelection_arr.join('');
+captcha_text_element.fillText(captcha_string, captcha_canvas.width/4, captcha_canvas.height/2);
+
+
+var submitCaptchaBtn = document.getElementById("submit-captcha-btn");
+submitCaptchaBtn.addEventListener('click', ()=>{
+    if (captcha_txtfield.value === captcha_string){
+        alert("Captcha is correct!");
+        document.getElementById("captcha-popup").classList.remove("popup-active");
+        document.getElementById("captcha-contents").classList.remove("popup-active");
+    } else {
+        alert("Please try again!");
+        captcha_txtfield.value ='';
+    }
+})
 
 
 var exitCaptchaBtn = document.getElementById("exit-captcha-btn");
