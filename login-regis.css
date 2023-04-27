@@ -139,7 +139,7 @@ body{
     text-align: center;
 }
 
-#submit-btn{
+.form-submit-btn{
     border-radius: 25px;
     padding: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
