@@ -1,12 +1,17 @@
-# Login
-Login with Captcha
+# Login with Captcha
+Login webpage with captcha to allow or deny submission of data.
 
 ## Description
-This is a github made by Afif Afwan, 21B6027, taking UBD Module ZC-3302 IPD.
+This is a github repo made by Afif Afwan, 21B6027, taking UBD Module ZC-3302 IPD.
 
-This mini project is to make a Webpage that takes in the user's registration only after the captcha challenge is successful.
+This is a mini project, where the goal is to make a webpage that takes in the user's registration only after the captcha challenge is successful.
 
-This code contains HTML, CSS, JS and PHP files.
+This repo contains HTML, CSS, JS and PHP files.
 
 ## Guide
-In the XAMPP server, please run initialize.php to create the database and table immediately. 
+After initializing the necessary elements in the XAMPP server, please enter: `localhost/login/initialize.php` to set up the database and the table.
+
+### `initalize.php` file's explaination
+* The `initialize.php` file will connect to the mysql, and upon success, it enters `create_database.php`.
+* Once the `create_database.php` has completed its task, it enters `create_table.php` to create a table under the database initialized.
+* After `create_table.php` has finished, it will lead to the `index.html` file, where the registration and login activites can be conducted!
