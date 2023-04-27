@@ -75,15 +75,6 @@ var alphanumeric_arr = [
   "8",
   "9",
 ];
-// let captchaSelection_arr = [];
-
-// // ! Inserting into array captcha values
-// for (let i = 0; i < 7; i++){
-//     captchaSelection_arr.push(alphanumeric_arr[Math.floor(Math.random() * alphanumeric_arr.length)]);
-// }
-
-// var captcha_string = captchaSelection_arr.join('');
-// captcha_text_element.fillText(captcha_string, captcha_canvas.width/4, captcha_canvas.height/2);
 
 var captcha_string = CreateCaptcha();
 
