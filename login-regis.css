@@ -119,7 +119,6 @@ body{
     visibility: visible;
 }
 
-
 #captcha-contents{
     display: grid;
     grid-template-rows: auto auto auto;
