@@ -1,22 +1,13 @@
 function ValidLoginForm(){
   // ! Input Fields
-  var username = document.getElementById("regis-username-field").value.trim();
-  var email = document.getElementById("regis-email-field").value.trim();
-  var password = document.getElementById("regis-password-field").value.trim();
-  var captcha_checkbox = document.getElementById("regis-captcha-checkbox");
+  var username = document.getElementById("login-username-field").value.trim();
+  var password = document.getElementById("login-password-field").value.trim();
+  var captcha_checkbox = document.getElementById("login-captcha-checkbox");
 
   // ! Validations
 
   if (username === "") {
         alert("Username is required!");
-        return false;
-    }
-
-    if (email === "") {
-        alert("Email is required!");
-        return false;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-        alert("Invalid email format!");
         return false;
     }
 
