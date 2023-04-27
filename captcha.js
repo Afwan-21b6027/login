@@ -10,10 +10,8 @@ captcha_text_element.fillStyle = "#000000";
 
 var captcha_txtfield = document.getElementById("captcha-text-field");
 
-
-
 // ! Array initialization
-let alphanumeric_arr = [
+var alphanumeric_arr = [
   "A",
   "B",
   "C",
@@ -77,15 +75,17 @@ let alphanumeric_arr = [
   "8",
   "9",
 ];
-let captchaSelection_arr = [];
+// let captchaSelection_arr = [];
 
-// ! Inserting into array captcha values
-for (let i = 0; i < 7; i++){
-    captchaSelection_arr.push(alphanumeric_arr[Math.floor(Math.random() * alphanumeric_arr.length)]);
-}
+// // ! Inserting into array captcha values
+// for (let i = 0; i < 7; i++){
+//     captchaSelection_arr.push(alphanumeric_arr[Math.floor(Math.random() * alphanumeric_arr.length)]);
+// }
 
-var captcha_string = captchaSelection_arr.join('');
-captcha_text_element.fillText(captcha_string, captcha_canvas.width/4, captcha_canvas.height/2);
+// var captcha_string = captchaSelection_arr.join('');
+// captcha_text_element.fillText(captcha_string, captcha_canvas.width/4, captcha_canvas.height/2);
+
+var captcha_string = CreateCaptcha();
 
 
 var submitCaptchaBtn = document.getElementById("submit-captcha-btn");
@@ -95,7 +95,7 @@ var exitCaptchaBtn = document.getElementById("exit-captcha-btn");
 exitCaptchaBtn.addEventListener('click', ExitCaptcha);
 
 var refreshCaptchaBtn = document.getElementById("refresh-captcha-btn");
-refreshCaptchaBtn.addEventListener('click', RefreshCaptcha);
+refreshCaptchaBtn.addEventListener('click', Refresh);
 
 function PopUpCaptcha() {
   var captchaPopupDiv = document.getElementById("captcha-popup");
@@ -132,15 +132,24 @@ function ExitCaptcha(){
     document.getElementById("captcha-checkbox").checked = false;
 }
 
-function RefreshCaptcha(){
-    captcha_txtfield.value = "";
-    let newCaptcha_arr = [];
+function Refresh(){
+    captcha_string = CreateCaptcha();
+}
+
+function CreateCaptcha(){
+    captcha_txtfield.value = '';
+    let alphanumerical_arr = [];
     for (let i = 0; i < 7; i++) {
-        captchaSelection_arr.push(
+      alphanumerical_arr.push(
         alphanumeric_arr[Math.floor(Math.random() * alphanumeric_arr.length)]
       );
     }
-    captcha_text_element.clearRect(0, 0, captcha_canva.width, captcha_canvas.height);
-    captcha_string = newCaptcha_arr.join('');
-    captcha_canvas.fillText(captcha_string, captcha_canvas.width/4, captcha_canvas.height/2);
+    captcha_text_element.clearRect(0, 0, captcha_canvas.width, captcha_canvas.height);
+    var captcha_string = alphanumerical_arr.join("");
+    captcha_text_element.fillText(
+      captcha_string,
+      captcha_canvas.width / 4,
+      captcha_canvas.height / 2
+    );
+    return captcha_string;
 }
