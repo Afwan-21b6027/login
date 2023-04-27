@@ -11,5 +11,11 @@ function PopUpCaptcha(){
     }
 }
 
+var exitCaptchaBtn = document.getElementById("exit-captcha-btn");
+exitCaptchaBtn.addEventListener('click', ()=>{
+    document.getElementById("captcha-popup").classList.remove("popup-active");
+    document.getElementById("captcha-contents").classList.remove("popup-active");
+    document.getElementById("captcha-checkbox").checked = false;
+})
 
 
