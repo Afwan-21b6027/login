@@ -50,8 +50,6 @@ body{
 
 }
 
-
-
 #content-div-register.regis-active{
     border: 1px solid black;
     border-radius: 25px;
@@ -92,7 +90,6 @@ body{
     text-transform: capitalize;
     font-style: italic;
 }
-
 
 #captcha-popup{
     position: fixed;
