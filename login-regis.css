@@ -73,18 +73,46 @@ body{
     margin-bottom: 20px;
 }
 
-.label-txt{
-    font-size: large;
-    text-transform: capitalize;
-    font-style: italic;
-}
-
 .captcha-div{
     border: solid 3px gray;
     border-radius: 5px;
     display: grid;
     grid-template-columns: auto auto;
     padding: 15px;
+}
+
+.captcha-submission-div{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px;
+}
+
+.label-txt{
+    font-size: large;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+
+#captcha-popup{
+    position: fixed;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background-color: white;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    /* transition: 0.5s; */
+}
+
+#captcha-contents{
+    display: grid;
+    grid-template-rows: auto auto auto;
 }
 
 .input-field{

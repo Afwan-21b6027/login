@@ -36,7 +36,8 @@
         </form>
     </div>
 
-    <div id="content-div-register" class="regis-active">
+    <!-- class="regis-active" -->
+    <div id="content-div-register" class="">
         <h2 id="div-header">Register</h2>
     
         <form action="registration.php" method="post" onsubmit="return IsFormValid(event)">
@@ -76,8 +77,15 @@
         </form>
     </div>
 
-    <div>
-
+    <div id="captcha-popup" class="">
+        <div id="captcha-contents">
+            <canvas id="captcha-canvas">Captcha Texts goes here</canvas>
+            <input type="text" name="captcha-text-field" id="captcha-text-field">
+            <div class="captcha-submission-div">
+                <button type="submit" id="refresh-captcha-btn">Refresh</button>
+                <button type="submit" id="submit-captcha-btn">Submit</button>
+            </div>
+        </div>
     </div>
 
     <script src="visibility.js"></script>
