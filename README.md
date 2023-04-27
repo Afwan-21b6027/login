@@ -9,7 +9,7 @@ This is a mini project, where the goal is to make a webpage that takes in the us
 This repo contains HTML, CSS, JS and PHP files.
 
 ## Guide
-After initializing the necessary elements in the XAMPP server, please enter: `localhost/login/initialize.php` to set up the database and the table.
+After initializing the necessary elements in the XAMPP server, please enter: `localhost/login/initialize.php` or press the button called _Initialize Database_ in `index.html` to set up the database and the table.
 
 ### `initalize.php` file's explaination
 * The `initialize.php` file will connect to the mysql, and upon success, it enters `create_database.php`.
