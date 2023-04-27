@@ -1,6 +1,8 @@
 <?php
     include('db.php');
 
+    session_start();
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -14,6 +16,8 @@
         echo "<script> 
             alert('User Found!'); 
             </script>";
+        $_SESSION['username'] = $username;
+        header("Location: welcome.php");
     } else {
         echo "<script> 
             alert('Account is not found!'); 

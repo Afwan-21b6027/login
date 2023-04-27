@@ -7,6 +7,18 @@
     <title>Welcome!</title>
 </head>
 <body>
-    <h1>Welcome User!</h1>
+    <?php
+        session_start();
+        if(isset($_SESSION['username'])){
+            echo "<h1>Welcome, " . $_SESSION['username'] . "!</h1>";
+        } else {
+            echo "<h1>Please log in.</h1>";
+        }
+    ?> 
+
+    <br>
+    <form method="POST" action="logout.php">
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
     require('db.php');
+    session_start();
 
     $username = $_POST["username"];
     $email = $_POST["email"];
@@ -13,6 +14,7 @@
         echo "<script> 
             alert('Successfully registered!'); 
             </script>";
+        $_SESSION['username'] = $username;
         header("Location: welcome.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
