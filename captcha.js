@@ -1,13 +1,8 @@
-
-
 // ! Captcha Element Initialization
 var captcha_canvas = document.querySelector("#captcha-canvas");
 var captcha_text_element = captcha_canvas.getContext('2d');
 captcha_text_element.font = "30px Roboto";
 captcha_text_element.fillStyle = "#000000";
-
-// ! Input field and buttons initialization
-
 var captcha_txtfield = document.getElementById("captcha-text-field");
 
 // ! Array initialization
