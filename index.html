@@ -49,15 +49,10 @@
     <!-- ! Login Div Section -->
     <div id="content-div-login" class="">
         <h2 id="div-header">Login</h2>
-        <form action="" method="post">
+        <form action="login.php" method="post" onsubmit="IsLoginFormValid()">
             <div class="input-div">
                 <label for="username" class="label-txt">Username</label>
                 <input type="text" class="input-field" name="username" id="login-username-field">
-            </div>
-
-            <div class="input-div">
-                <label for="email" class="label-txt">Email Address</label>
-                <input type="email" class="input-field" name="email" id="login-email-field">
             </div>
 
             <div class="input-div">
@@ -94,6 +89,6 @@
     <script src="captcha.js"></script>
     <script src="visibility.js"></script>
     <script src="valid-regis.js"></script>
-    <!-- <script src="valid-login.js"></script> -->
+    <script src="valid-login.js"></script>
 </body>
 </html>
