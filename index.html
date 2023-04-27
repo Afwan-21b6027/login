@@ -28,6 +28,11 @@
                 <input type="password" class="input-field" name="password" id="login-password-field">
                 <span id="err-password-span"></span>
             </div>
+
+            <div class="captcha-div">
+                <input type="checkbox" name="captcha-checkbox" id="captcha-checkbox" onclick="PopUpCaptcha()">
+                <label for="captcha-checkbox" class="label-txt">Captcha</label>
+            </div>
             
             <div class="input-div">
                 <p class="link-txt">First time? <a class="link-txt" href="#" onclick="ChangeToRegister()">Click here</a> to sign up!</p>
@@ -36,7 +41,6 @@
         </form>
     </div>
 
-    <!-- class="regis-active" -->
     <div id="content-div-register" class="regis-active">
         <h2 id="div-header">Register</h2>
     
